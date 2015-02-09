@@ -16,6 +16,15 @@ docker run \
   fr3nd/awscli
 ```
 
+Run awscli "ec2 describe-instances" with current aws credentials file:
+```
+docker run \
+  --rm \
+  -v ~/.aws:/root/.aws \
+  fr3nd/awscli \
+  ec2 describe-instances
+```
+
 ## FAQ
 
 ### Why to containerize such a simple application?
